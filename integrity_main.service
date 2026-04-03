@@ -1,0 +1,11 @@
+[Unit]
+Description=Live Integrity Monitor
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/aditya/Desktop/integrity_project/integrity_checker.py --monitor
+Restart=always
+User=aditya
+
+[Install]
+WantedBy=multi-user.target

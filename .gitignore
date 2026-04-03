@@ -1,0 +1,11 @@
+# Ignore private logs and local database
+security_log.txt
+baseline.json
+
+# Ignore local folders with actual data
+backups/
+quarantine/
+__pycache__/
+
+# Ignore OS-specific files
+.DS_Store

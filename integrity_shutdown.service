@@ -1,0 +1,13 @@
+[Unit]
+Description=Final Scan Before Shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/aditya/Desktop/integrity_project/integrity_checker.py --shutdown-scan
+User=aditya
+RemainAfterExit=yes
+
+[Install]
+WantedBy=shutdown.target
